@@ -1,0 +1,74 @@
+/* Defining a css variables */
+:root {
+    --color-red: red;
+    --color-green: rgb(5, 151, 22);
+    --color-light-grey: rgb(234, 234, 234);
+    --color-grey: rgb(219, 219, 219);
+    --color-brown: brown;
+    --color-white: rgb(255, 255, 255);
+
+    --primary-color: blue;
+    --secondary-color: yellow;
+    --primary-dark: darkblue;
+    --secondary-dark: rgb(152, 152, 13);
+
+    --primary-font: 'Roboto', sans-serif;
+}
+
+/* styling with class attribute */
+
+.sample_class {
+    color: var(--color-red);
+}
+
+/* h1{
+    color: var(--color-red);
+}  */
+
+/*  Not preferred to use css with id
+#sample_id {
+    color: green;
+}
+*/
+
+
+.grey_box {
+    background-color: var(--color-grey);
+}
+
+.green-btn {
+    background-color: var(--color-green);
+    color: var(--color-white);
+}
+
+.color-white {
+    color: var(--color-white);
+}
+
+.color-brown {
+    color: var(--color-brown);
+}
+
+.color-red {
+    color: var(--color-red);
+}
+
+.color-blue {
+    color: var(--primary-color);
+}
+
+.bg-light-grey {
+    background-color: var(--color-light-grey);
+}
+
+.bg-red {
+    background-color: red;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.bg-white {
+    background-color: var(--color-white);
+}

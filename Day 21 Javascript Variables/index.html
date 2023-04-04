@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Javascript Variables, pls check console for the output</h3>
+
+    <script>
+        // lets define a variable
+
+        /* AIM : Store student details in variable */
+
+
+        //  variable declaration
+        let name
+        let age
+        let course_name
+
+        console.log("1123as123") // single quotes or double quotes 
+        console.log('1123as123') // single quotes or double quotes 
+        console.log(1234)
+
+        console.log(name)
+        console.log(age)
+        console.log(course_name)
+
+        // assign values to the variable
+        name = "John"
+        age = "25"
+        course_name = "BTec"
+
+        console.log(name)
+        console.log(age)
+        console.log(course_name)
+
+        name = "Alice"
+        age = "23"
+        course_name = "MCA"
+
+        console.log(name)
+        console.log(age)
+        console.log(course_name)
+
+        // Variable naming format
+
+        // Do not start with a number
+        // let 1st --> Failure
+        // let s1t --> Valid
+        // let 222 --> Faliure
+
+        // Do not contain white spaces
+        // let course name --> Failure
+
+        // Do not start with special characters
+        // let @gmail --> Failure
+
+        // Do not contain boolen values
+        // let false
+
+        // variable name should not be a keyword
+        // let if
+        // let for
+        // let while
+        // let do
+        // let let
+        // let const
+        // let var
+
+        //  Do not special characters
+        // let course-name
+        // let course.name = "asd"
+
+        // possible ways
+        let First_name
+        let first_name
+        let fisrtName
+        let FirstName
+        let FIRSTNAME
+        let FIrstName
+        let _FIrstName
+
+        // lets define a varable with value 10
+        let a = 10
+
+        let b = 3.14
+        let c = "10"
+        let d = '10'
+        let f = true
+        let g = 0
+
+        console.log(a)
+
+        // data type
+        data_type = typeof (a)
+
+        console.log("type of a is : ", data_type)
+
+        console.log("type of b is : ", typeof (b))
+        console.log("type of c is : ", typeof (c))
+        console.log("type of d is : ", typeof (d))
+        console.log("type of f is : ", typeof (f))
+        console.log("type of g is : ", typeof (g))
+
+        let sentence = name + " is an " + course_name + " student of Age " + age + ": " + a
+        console.log(sentence)
+
+        let mark_english = "80"
+        let mark_maths = "90"
+        let mark_computer = "90"
+        let mark_chemistry = "78"
+
+
+
+        let total_mark = mark_chemistry + mark_computer + mark_english + mark_maths
+
+        console.log("Total mark : ", total_mark)
+
+        // converting string to number by using parseInt or  Number method
+        total_mark = parseInt(mark_chemistry) + parseInt(mark_computer) + parseInt(mark_english) + parseInt(mark_maths)
+
+        console.log("Total mark : ", total_mark)
+
+        console.log("type of total mark : ", typeof (total_mark))
+
+        total_mark_str = String(total_mark)
+
+        console.log("type of total mark str : ", typeof (total_mark_str))
+        console.log("total mark : ", total_mark_str)
+
+        // Arithemetic operators : +, -, / , *, %
+
+        let num1 = 10
+        let num2 = 20
+        let num3 = 30
+
+        let num4 = "40"
+
+        let sum = num1 + num2 + num3 //+ num4
+        console.log("Sum is : ", typeof (sum))
+
+        let diff = num3 - num2
+        console.log("Diff is : ", diff)
+
+        let mul = num3 * num1
+        console.log("Mul is : ", mul)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

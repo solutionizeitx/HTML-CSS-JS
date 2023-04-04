@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Machine Demo</title>
+</head>
+
+<body>
+    <script>
+        // ATM Machine Demo - Menu Driven Program
+        // Structure -->
+        // 1.Authentication - 
+        // 2.Withdrawal - 
+        // 3.Deposit - 
+        // 4.Balance check
+        // 5.Exit
+
+        // atm_data  - array contains objects or each users
+        let atm_data = [
+            {
+                "id": 1,
+                "name": "atira",
+                "balance": 100000,
+                "pin": "12345",
+                "card_number": "4234456788769"
+            },
+            {
+                "id": 2,
+                "name": "afira",
+                "balance": 50000,
+                "pin": "11111",
+                "card_number": "6454456788769"
+            },
+            {
+                "id": 3,
+                "name": "amira",
+                "balance": 20000,
+                "pin": "22222",
+                "card_number": "5674456788769"
+            },
+            {
+                "id": 4,
+                "name": "anira",
+                "balance": 30000,
+                "pin": "33333",
+                "card_number": "7894456788769"
+            }
+        ]
+
+        // 1. Authentication
+        user_card = prompt("Enter your card number");
+        user_pin = prompt("Enter your pin number");
+
+        is_authenticated = false;
+
+        user_obj_index = null;
+
+        for (let i = 0; i < atm_data.length; i++) {
+            if (atm_data[i].card_number == user_card && atm_data[i].pin == user_pin) {
+                console.log("Authentication Successfull");
+                is_authenticated = true;
+                user_obj_index = i;
+                break;
+            }
+        }
+
+
+        if (is_authenticated == true) {
+            while (true) {
+                let option = prompt("Choose your option: \n 2. Withdrawal \n 3. Deposit \n 4. Balance check \n 5. Exit");
+                if (option == "2") {
+                    console.log("You have choosed Withdrawal");
+                } else if (option == "3") {
+                    console.log("You have choosed Deposit");
+                } else if (option == "4") {
+                    console.log("You have choosed Balance check");
+                } else if (option == "5") {
+                    console.log("You have choosed Exit");
+                    break;
+                } else {
+                    console.log("Invalid option, Please try again");
+                }
+            }
+        }
+        else {
+            console.log("Authentication Failed");
+        }
+    </script>
+</body>
+
+</html>

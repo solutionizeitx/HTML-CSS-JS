@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let current_possition = 0
+        let snake_head = 12
+        let snake_tail = 2
+        let ladder_end = 16
+        let ladder_start = 3
+        let end_possition = 31
+        let game_started = false
+
+        while (true) {
+            let dice = parseInt(prompt("You have rolled the dice, enter the value you have got, press 0 to exit"))
+            console.log("You got : ", dice)
+
+            if (dice == 0) {
+                console.log("YOU HAVE STOPPED THE GAME")
+                break;
+            }
+            else if (current_possition == 0 & dice == 1) {
+                // this block should exicute only at the beging
+                current_possition += 1
+                game_started = true
+                console.log("Congrats You are on the boad")
+            }
+            else if (game_started == true & (dice == 1 || dice == 2 || dice == 3 || dice == 4 || dice == 5 || dice == 6)) {
+                // this block should exicute only at the beging
+                // current_possition += dice
+                current_possition = current_possition + dice
+
+                console.log("Possition changed to ", current_possition)
+
+                if (current_possition == end_possition) {
+                    console.log("Congrats you have won")
+                    break;
+                }
+
+                if (current_possition > end_possition) {
+                    console.log("Value exceeded")
+                    current_possition = current_possition - dice
+                    console.log("Possition changed to ", current_possition)
+                }
+
+                if (current_possition == snake_head) {
+                    // Snake bite case
+                    console.log("Snake has bitten you!!!")
+                    current_possition = snake_tail
+                    console.log("Possition changed to ", current_possition)
+                }
+
+                if (current_possition == ladder_start) {
+                    // Ladder case
+                    console.log("Congats you are at the ladder!!!")
+                    current_possition = ladder_end
+                    console.log("Possition changed to ", current_possition)
+                }
+            }
+            else if (game_started == true) {
+                console.log("Invalid value received, needed 1,2,3,4,5,6")
+            }
+            else {
+
+                console.log("You need to get 1 to start the game")
+            }
+        }
+        console.log("Game End ...")
+
+    </script>
+</body>
+
+</html>

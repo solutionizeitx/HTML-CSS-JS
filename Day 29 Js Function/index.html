@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Javascript Variables, pls check console for the output</h3>
+
+    <script>
+        console.log("Program started....")
+
+        "Functions of Mobile phone"
+        "1. Call"
+        "2. Message"
+        "3. Camera"
+        "4. Music"
+        "5. Games or apps"
+
+        console.log("Mobile Company Logo")
+        console.log("Loading Home screen...")
+        console.log("Loaded everything, now you can use your mobile phone")
+
+
+        /* function call */
+        entered_password = prompt("Enter your password to unlock the mobile phone")
+        password = "1234"
+        if (password == entered_password) {
+            console.log("Mobile phone unlocked successfully...")
+            while (true) {
+                choice = prompt("Enter your choice: \n 1. Call \n 2. Message \n 3. Camera \n 4. Music \n 5. Games or apps \n 6. Switch off")
+
+                if (choice == 1) {
+                    to = prompt("Enter the number to call")
+                    call(to)
+                } else if (choice == 2) {
+                    to = prompt("Enter the number to send message")
+                    msg = prompt("Enter the message to send")
+                    message(to, msg)
+                } else if (choice == 3) {
+                    camera()
+                } else if (choice == 4) {
+                    music("asdas")
+                } else if (choice == 5) {
+                    applications()
+                } else if (choice == 6) {
+                    switchOff()
+                    break
+                } else {
+                    alert("Invalid choice, please try again...")
+                }
+                key = confirm("Do you want to continue?")
+                if (key == false) {
+                    break
+                }
+            }
+        } else {
+            alert("Wrong password, please reload the browser and try again...")
+        }
+
+        console.log("Program Executed Successfully...")
+
+
+        /* function definition */
+        function call(to) {
+            console.log("Calling to " + to)
+        }
+
+        function message(to, message) {
+            console.log("Sending message to " + to + " with message: " + message)
+        }
+
+        function camera() {
+            console.log("Opening Camera...")
+        }
+
+        function music() {
+            console.log("Opening Music...")
+        }
+
+        function applications() {
+            console.log("Opening Applications...")
+        }
+
+        function switchOff() {
+            console.log("Switching off the mobile phone...")
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

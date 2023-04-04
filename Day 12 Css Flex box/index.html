@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Css-Flex</title>
+    <style>
+        .parent-div-column {
+            background-color: rgb(240, 188, 188);
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .parent-div-row {
+            background-color: rgb(246, 224, 115);
+            height: 200px;
+            display: flex;
+            flex-direction: row;
+            /* default flex-direction:row */
+        }
+
+        .child-div {
+            margin: 5px;
+            /* width: 300px; */
+        }
+
+        /* .width-100 {
+            width: 100px;
+        }
+        .width-300 {
+            width: 300px;
+        } */
+        .child-1 {
+            flex: 1;
+            background-color: green;
+        }
+
+        .child-2 {
+            flex: 1;
+            background-color: yellow;
+        }
+
+        .child-3 {
+            flex: 1;
+            /* width: 300px; */
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Css-Flex</h1>
+    <button id="demo">Download</button>
+    <h3>parent-div-colum</h3>
+    <div class="parent-div-column">
+        <!-- parent div -->
+        <br />
+        <div class="child-div width-100 child-1">child 1</div>
+        <div class="child-div width-300 child-2">child 2</div>
+        <div class="child-div width-100 child-3">child 3</div>
+    </div>
+    <br />
+    <br />
+    <h3>parent-div-row</h3>
+    <div class="parent-div-row">
+        <!-- parent div -->
+        <div class="child-div width-100 child-1">child 1</div>
+        <div class="child-div width-300 child-2">child 2</div>
+        <div class="child-div width-100 child-3">child 3</div>
+    </div>
+
+</body>
+
+</html>

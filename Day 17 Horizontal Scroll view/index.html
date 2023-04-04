@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .horizontal_scroll_view {
+            display: flex;
+            flex-direction: column;
+            height: 300px;
+            flex-wrap: wrap;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            justify-content: center;
+        }
+
+        .vertical_scroll_view {
+            display: flex;
+            flex-direction: row;
+            height: 500px;
+            width: 300px;
+            flex-wrap: wrap;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            justify-content: center;
+        }
+
+        .item {
+            background-color: white;
+            box-shadow: 1px 1px 10px 2px rgb(220, 220, 220);
+            margin: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            width: 100px;
+            height: 180px;
+        }
+
+        .item-img {
+            height: 100px;
+            width: 100px;
+        }
+
+
+        .horizontal_scrollview {
+            display: flex;
+            width: 100%;
+            overflow-x: scroll;
+        }
+
+
+        .vertical_scrollview {
+            height: 300px;
+            overflow-x: scroll;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="horizontal_scroll_view">
+        <div class="item">
+            <img class="item-img" src="https://th.bing.com/th/id/OIP.X394FD-YNTk5E3j1ily1SwHaL1?pid=ImgDet&rs=1" />
+            <div>Item A</div>
+            <div>₹ 1000</div>
+            <div>Seller A</div>
+        </div>
+    </div>
+    <div class="vertical_scroll_view">
+        <div class="item">
+            <img class="item-img" src="https://th.bing.com/th/id/OIP.X394FD-YNTk5E3j1ily1SwHaL1?pid=ImgDet&rs=1" />
+            <div>Item A</div>
+            <div>₹ 1000</div>
+            <div>Seller A</div>
+        </div>
+    </div> -->
+
+    <div class="horizontal_scrollview" id="scroll_view_01">
+        <div class="item">
+            <img class="item-img" src="https://th.bing.com/th/id/OIP.X394FD-YNTk5E3j1ily1SwHaL1?pid=ImgDet&rs=1" />
+            <div>Item A</div>
+            <div>₹ 1000</div>
+            <div>Seller A</div>
+        </div>
+    </div>
+    <div class="vertical_scrollview" id="scroll_view_02">
+        <div class="item">
+            <img class="item-img" src="https://th.bing.com/th/id/OIP.X394FD-YNTk5E3j1ily1SwHaL1?pid=ImgDet&rs=1" />
+            <div>Item A</div>
+            <div>₹ 1000</div>
+            <div>Seller A</div>
+        </div>
+    </div>
+
+    <script>
+        let card = ""
+        for (let i = 0; i < 30; i++) {
+            card = card + `<div class="item">
+            <img class="item-img" src="https://th.bing.com/th/id/OIP.X394FD-YNTk5E3j1ily1SwHaL1?pid=ImgDet&rs=1" />
+            <div>Item A</div>
+            <div>₹ 1000</div>
+            <div>Seller A</div>
+        </div>`
+        }
+        document.getElementById("scroll_view_01").innerHTML = card
+        document.getElementById("scroll_view_02").innerHTML = card
+
+
+    </script>
+</body>
+
+
+</html>
